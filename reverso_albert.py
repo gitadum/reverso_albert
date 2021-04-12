@@ -13,7 +13,7 @@ import reverso_api.context
 from albert import *
 
 __title__ = "Reverso Context"
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __triggers__ = "rev "
 __authors__ = "adum"
 
