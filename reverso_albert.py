@@ -30,6 +30,22 @@ def get_fisrt_translation(source_text, source_lang, target_lang):
 
     return first_result
 
+def top_n_translations(source_text, source_lang, target_lang):
+
+    n = 3
+    api = reverso_api.context.ReversoContextAPI(source_text, '', source_lang, target_lang)
+    results = list(api.get_translations())
+    try:
+        top_five_results = [result[1] for result in results[:n]]
+        output = ""
+        for result in top_five_results:
+            output += result + ', '
+        output = output[:-2]
+    except:
+        output = None
+
+    return output
+
 def handleQuery(query):
     if query.isTriggered:
         fields = query.string.split()
@@ -38,7 +54,7 @@ def handleQuery(query):
             src = fields[0]
             dst = fields[1]
             txt = " ".join(fields[2:])
-            result = get_fisrt_translation(txt, src, dst)
+            result = top_n_translations(txt, src, dst)
             item.text = result
 #           item.subtext = "%s-%s translation of %s" % (src.upper(), dst.upper(), txt)
             item.subtext = ""
