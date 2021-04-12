@@ -19,9 +19,9 @@ def top_n_translations(source_text, source_lang, target_lang):
     api = reverso_api.context.ReversoContextAPI(source_text, '', source_lang, target_lang)
     results = list(api.get_translations())
     try:
-        top_five_results = [result[1] for result in results[:n]]
+        top_n_results = [result[1] for result in results[:n]]
         output = ""
-        for result in top_five_results:
+        for result in top_n_results:
             output += result + ', '
         output = output[:-2]
     except:
