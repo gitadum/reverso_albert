@@ -1,18 +1,18 @@
-With this extension written in python for albert launcher, you can translate terms between 14 languages :
-* Arabic
-* Chinese
-* Dutch
-* English
-* French
-* German
-* Hebrew
-* Italian
-* Japanese
-* Polish
-* Portuguese
-* Romanian
-* Russian
-* Spanish
-* Turkish
+With this extension for albert launcher, you can translate terms between 14 languages :
+* Arabic (`ar`)
+* Chinese (`zh`)
+* Dutch (`nl`)
+* English (`en`)
+* French (`fr`)
+* German (`de`)
+* Hebrew (`he`)
+* Italian (`it`)
+* Japanese (`ja`)
+* Polish (`pl`)
+* Portuguese (`pt`)
+* Romanian (`ro`)
+* Russian (`ru`)
+* Spanish (`es`)
+* Turkish (`tr`)
 
-![example](https://github.com/gitadum/reverso_albert/blob/master/reverso-albert.png?raw=true)
+![english_to_french](https://github.com/gitadum/reverso_albert/blob/master/reverso-albert.png?raw=true)
