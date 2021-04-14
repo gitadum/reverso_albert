@@ -15,4 +15,4 @@ With this extension written in python for albert launcher, you can translate ter
 * Spanish
 * Turkish
 
-![example](reverso_albert.png)
+![example](https://github.com/gitadum/reverso_albert/reverso_albert.png?raw=true)
