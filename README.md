@@ -27,7 +27,7 @@ sys.path.append('/path/to/reverso_api_module/')
 
 # Use
 
-To translate terms between two languages, type queries that follows this pattern :
+To translate terms between two languages, type queries that follow this pattern :
 ```
 rev <source_language_letter_code> <target_language_letter_code> <term_or_text_to_translate>
 ```
