@@ -1,37 +1,27 @@
 # -*- coding: utf-8 -*-
 
-"""Translate text using Reverso Context.
-Based on Manuel Schneider Google Translate extension.
+"""Translates words between 15 languages.
+Takes advantage of the Reverso Context translator API for Python.
+Inspired by Manuel Schneider's Google Translate extension.
 
-Synopsis: <trigger> <src_lang> <dest_lang> <text>"""
+Synopsis: <trigger> <src_lang> <dest_lang> <text>
+Languages: ar(Arabic), de(German), en(English), es(Spanish), fr(French),
+he(Hebrew), it(Italian), ja(Japanese), nl(Dutch), pl(Polish), po(Portuguese),
+ro(Romanian), ru(Russian) tr(Turkish), zh(Chinese)"""
 
 import sys
-#sys.path.insert(0, '/usr/bin/anaconda3/lib/python3.8/site-packages/')
 sys.path.append('/usr/bin/anaconda3/lib/python3.8/site-packages/')
 import reverso_api.context
-
 from albert import *
 
 __title__ = "Reverso Context"
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 __triggers__ = "rev "
 __authors__ = "adum"
 
 iconPath = iconLookup('config-language') or ":python_module"
 
-def get_fisrt_translation(source_text, source_lang, target_lang):
-
-    api = reverso_api.context.ReversoContextAPI(source_text, '', source_lang, target_lang)
-    results = list(api.get_translations())
-    try:
-        first_result = results[0][1]
-    except:
-        first_result = None
-
-    return first_result
-
 def top_n_translations(source_text, source_lang, target_lang):
-
     n = 3
     api = reverso_api.context.ReversoContextAPI(source_text, '', source_lang, target_lang)
     results = list(api.get_translations())
@@ -43,7 +33,7 @@ def top_n_translations(source_text, source_lang, target_lang):
         output = output[:-2]
     except:
         output = None
-
+    
     return output
 
 def handleQuery(query):
@@ -62,5 +52,6 @@ def handleQuery(query):
             return item
         else:
             item.text = __title__
-            item.subtext = "Enter a query in the form of \"&lt;srclang&gt; &lt;dstlang&gt; &lt;text&gt;\""
+            item.subtext = "Enter a query in the form of "\
+                           + "\"&lt;srclang&gt; &lt;dstlang&gt; &lt;text&gt;\""
             return item
