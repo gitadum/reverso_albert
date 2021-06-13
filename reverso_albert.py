@@ -3,14 +3,13 @@
 """Translates words between 15 languages.
 Takes advantage of the Reverso Context translator API for Python.
 Inspired by Manuel Schneider's Google Translate extension.
+More infos about Reverso API for Python at https://pypi.org/project/Reverso-API/
 
 Synopsis: <trigger> <src_lang> <dest_lang> <text>
 Languages: ar(Arabic), de(German), en(English), es(Spanish), fr(French),
 he(Hebrew), it(Italian), ja(Japanese), nl(Dutch), pl(Polish), po(Portuguese),
-ro(Romanian), ru(Russian) tr(Turkish), zh(Chinese)"""
+ro(Romanian), ru(Russian), tr(Turkish), zh(Chinese)"""
 
-import sys
-sys.path.append('/usr/bin/anaconda3/lib/python3.8/site-packages/')
 import reverso_api.context
 from albert import *
 

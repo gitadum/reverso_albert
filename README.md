@@ -12,13 +12,13 @@ Translates words between 15 languages within your albert launcher.
 If you haven't already, install albert by following these steps: https://albertlauncher.github.io/installing/
 
 This extension is based on the Reverso Context translator API for Python. You can install it by running:
-`pip install reverso_api` on your terminal.
+`pip install reverso_api` on your terminal. More infos about this API is available [here](https://pypi.org/project/Reverso-API/).
 
 ## Installation steps
 
 1. To install this extension, just copy the script `reverso_albert.py` to `/usr/share/albert/org.extension.python/modules/reverso_albert/__init__.py`
 
-! IMPORTANT : if you use several Python interpreters on your local machine, make sure that the `reverso_api` module is accessible to the interpreter used by albert. To do so, add the module location to sys.path within the script by inserting
+! IMPORTANT : if you have several Python environments installed on your local machine, make sure that the `reverso_api` module is accessible to the interpreter used by albert. To do so, add the module location to sys.path within the script by inserting
 
 ```
 import sys
